@@ -27,8 +27,7 @@ Test Setup
     ...                You can define the ${TEST_137_SETUP} variable with a keyword for setting up this specific test.
     ...                If both are defined, ${TEST_137_SETUP} will be run after ${TEST_SETUP}.
 
-    If    $TEST_SETUP is not None    Run Keyword    ${TEST_SETUP}
-    If    $TEST_137_SETUP is not None    Run Keyword    ${TEST_137_SETUP}
+    IF    $TEST_SETUP is not None    Run Keyword    ${TEST_SETUP}
 
 Test Teardown
     [Documentation]    test teardown

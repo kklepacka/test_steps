@@ -14,5 +14,7 @@ Go to connection page
 Go to cart
     Click    ${essential_buttons}[butt_panier]
 
+Check if connected
+    Get Element    ${essential_buttons}[byebye_button]
 Say bye bye
     Click    ${essential_buttons}[byebye_button]
