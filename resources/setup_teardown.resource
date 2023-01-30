@@ -1,10 +1,17 @@
-*** Variables ***
-${TEST SETUP}    Open Application
-${URL}    https://sut-test-adrian.squashcloud.io/
+*** Settings ***
+Documentation    Setup and teardown to execute every test run
+Library    Browser
+Resource    page_objects/header.resource
 
-***Keywords*** 
-Open Application
-    [Documentation]    Test setup.
-    Register Keyword To Run On Failure    Take Screenshot    failure_screen_{index}    fullPage=True
-    New Browser    browser=firefox    headless=True
-    New Page    url=${URL}
+*** Variables ***
+&{setupTeardown}    url=https://sut-test-adrian.squashcloud.io/
+...    browser=firefox    
+${TEST SETUP}    Setup
+${TEST TEARDOWN}    Teardown
+*** Keywords ***
+Setup
+    New Browser    ${setupTeardown}[browser]    headless=false
+    New Context    locale=-FR
+    New Page    url=${setupTeardown}[url]
+Teardown
+    Browser.Close Browser
