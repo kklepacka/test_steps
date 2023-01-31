@@ -35,5 +35,4 @@ Test Teardown
     ...                You can define the ${TEST_137_TEARDOWN} variable with a keyword for tearing down this specific test.
     ...                If both are defined, ${TEST_TEARDOWN} will be run after ${TEST_137_TEARDOWN}.
 
-    If    $TEST_137_TEARDOWN is not None    Run Keyword    ${TEST_137_TEARDOWN}
-    If    $TEST_TEARDOWN is not None    Run Keyword    ${TEST_TEARDOWN}
+    IF    $TEST_TEARDOWN is not None    Run Keyword    ${TEST_TEARDOWN}
