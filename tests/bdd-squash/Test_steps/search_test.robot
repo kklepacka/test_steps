@@ -8,9 +8,9 @@ Test "Recherche"
 
     je suis sur la page d'accueil
         Check home page
-    je saisi une chaine de caractères
+    je saisi une chaine de caractères : "test"
         Enter search term
-    je clique sur "Entrer"
+    je clique sur Entrer
         Validate
     des résultats de la recherche s'affichent
         Check Search result page
