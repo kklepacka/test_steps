@@ -1,4 +1,5 @@
 *** Settings ***
+Library    Browser
 Resource    ../../resources/page_objects/home.resource
 Resource    ../../resources/page_objects/header.resource
 Resource    ../../resources/page_objects/login.resource

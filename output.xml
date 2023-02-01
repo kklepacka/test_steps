@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230201 12:21:51.086" rpa="false" schemaversion="3">
-<suite id="s1" name="Search Test" source="c:\Users\kklepacka\Documents\SquashAD\test_steps\tests\bdd-squash\Test_steps\search_test.robot">
-<test id="s1-t1" name="Test &quot;Recherche&quot;" line="7">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230201 16:40:09.563" rpa="false" schemaversion="3">
+<suite id="s1" name="Echo Test" source="c:\Users\kklepacka\Documents\SquashAD\test_steps\tests\bdd-squash\156_test_cs___echo_test_.robot">
+<test id="s1-t1" name="Test_CS_${echo test}" line="13">
 <kw name="Test Setup" type="SETUP">
-<doc>test setup</doc>
+<doc>test setup
+You can define the Setup variable with a keyword for setting up all your tests.
+You can define the ${TEST_156_SETUP} variable with a keyword for setting up this specific test.
+If both are defined, ${TEST_156_SETUP} will be run after Setup.</doc>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_SETUP_VALUE}</var>
+<arg>${TEST_SETUP}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230201 16:40:10.932" level="INFO">${TEST_SETUP_VALUE} = Setup</msg>
+<status status="PASS" starttime="20230201 16:40:10.931" endtime="20230201 16:40:10.933"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_156_SETUP_VALUE}</var>
+<arg>${TEST_156_SETUP}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230201 16:40:10.935" level="INFO">${TEST_156_SETUP_VALUE} = None</msg>
+<status status="PASS" starttime="20230201 16:40:10.933" endtime="20230201 16:40:10.935"/>
+</kw>
 <if>
-<branch type="IF" condition="$TEST_SETUP is not None">
+<branch type="IF" condition="$TEST_SETUP_VALUE is not None">
 <kw name="Run Keyword" library="BuiltIn">
 <arg>${TEST_SETUP}</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -16,16 +33,16 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230201 12:21:55.256" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\kklepacka\\Documents\\SquashAD\\test_steps\\browser\\traces\\3b0b4ac0-b1a2-494c-a5ed-7d257e04e266"}</msg>
-<msg timestamp="20230201 12:21:57.811" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\kklepacka\\Documents\\SquashAD\\test_steps\\browser\\traces\\3b0b4ac0-b1a2-494c-a5ed-7d257e04e266"}</msg>
-<status status="PASS" starttime="20230201 12:21:55.255" endtime="20230201 12:21:57.811"/>
+<msg timestamp="20230201 16:40:10.945" level="INFO">{"browser": "firefox", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\kklepacka\\Documents\\SquashAD\\test_steps\\browser\\traces\\2ee790b3-04b6-48d4-935b-2a2b2a34d364"}</msg>
+<msg timestamp="20230201 16:40:11.956" level="INFO">Successfully created browser with options: {"browser":"firefox","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\kklepacka\\Documents\\SquashAD\\test_steps\\browser\\traces\\2ee790b3-04b6-48d4-935b-2a2b2a34d364"}</msg>
+<status status="PASS" starttime="20230201 16:40:10.945" endtime="20230201 16:40:11.956"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>locale=-FR</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230201 12:21:57.813" level="INFO">{
+<msg timestamp="20230201 16:40:11.958" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -36,139 +53,107 @@
   "offline": false,
   "reducedMotion": "no-preference",
   "viewport": {
-    "height": 720,
-    "width": 1280
+    "width": 1280,
+    "height": 720
   },
   "deprecated_pos_args": []
 }</msg>
-<msg timestamp="20230201 12:21:57.911" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230201 12:21:57.911" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': '-FR', 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'height': 720, 'width': 1280}, 'deprecated_pos_args': []}</msg>
-<status status="PASS" starttime="20230201 12:21:57.812" endtime="20230201 12:21:57.912"/>
+<msg timestamp="20230201 16:40:12.025" level="INFO">Successfully created context. </msg>
+<msg timestamp="20230201 16:40:12.025" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': False, 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'locale': '-FR', 'offline': False, 'reducedMotion': 'no-preference', 'viewport': {'width': 1280, 'height': 720}, 'deprecated_pos_args': []}</msg>
+<status status="PASS" starttime="20230201 16:40:11.957" endtime="20230201 16:40:12.025"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>url=${setupTeardown}[url]</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230201 12:25:09.500" level="INFO">Successfully initialized new page object and opened url: https://sut-test-adrian.squashcloud.io/</msg>
-<status status="PASS" starttime="20230201 12:21:57.912" endtime="20230201 12:25:09.544"/>
+<msg timestamp="20230201 16:40:14.445" level="INFO">Successfully initialized new page object and opened url: https://sut-test-adrian.squashcloud.io/</msg>
+<status status="PASS" starttime="20230201 16:40:12.026" endtime="20230201 16:40:14.446"/>
 </kw>
-<status status="PASS" starttime="20230201 12:21:55.255" endtime="20230201 12:25:09.559"/>
+<status status="PASS" starttime="20230201 16:40:10.944" endtime="20230201 16:40:14.447"/>
 </kw>
-<status status="PASS" starttime="20230201 12:21:55.250" endtime="20230201 12:25:09.559"/>
+<status status="PASS" starttime="20230201 16:40:10.940" endtime="20230201 16:40:14.447"/>
 </kw>
-<status status="PASS" starttime="20230201 12:21:55.247" endtime="20230201 12:25:09.561"/>
+<status status="PASS" starttime="20230201 16:40:10.935" endtime="20230201 16:40:14.447"/>
 </branch>
-<status status="PASS" starttime="20230201 12:21:55.247" endtime="20230201 12:25:09.562"/>
+<status status="PASS" starttime="20230201 16:40:10.935" endtime="20230201 16:40:14.447"/>
 </if>
-<status status="PASS" starttime="20230201 12:21:55.247" endtime="20230201 12:25:09.562"/>
+<if>
+<branch type="IF" condition="$TEST_156_SETUP_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_156_SETUP}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230201 16:40:14.448" endtime="20230201 16:40:14.448"/>
 </kw>
-<kw name="je suis sur la page d'accueil" library="step_search">
+<status status="NOT RUN" starttime="20230201 16:40:14.447" endtime="20230201 16:40:14.448"/>
+</branch>
+<status status="PASS" starttime="20230201 16:40:14.447" endtime="20230201 16:40:14.449"/>
+</if>
+<status status="PASS" starttime="20230201 16:40:10.931" endtime="20230201 16:40:14.449"/>
+</kw>
+<kw name="Given je suis sur la page d'accueil" library="step_search">
 <kw name="Check home page" library="home">
 <kw name="Get Element" library="Browser">
 <arg>${homeLocator}[title]</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230201 12:25:09.833" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230201 12:25:09.601" endtime="20230201 12:25:09.840"/>
+<msg timestamp="20230201 16:40:14.539" level="INFO">Locator found successfully.</msg>
+<status status="PASS" starttime="20230201 16:40:14.451" endtime="20230201 16:40:14.540"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:09.595" endtime="20230201 12:25:09.840"/>
+<status status="PASS" starttime="20230201 16:40:14.451" endtime="20230201 16:40:14.541"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:09.578" endtime="20230201 12:25:09.841"/>
+<status status="PASS" starttime="20230201 16:40:14.451" endtime="20230201 16:40:14.543"/>
 </kw>
-<kw name="Check home page" library="home">
-<kw name="Get Element" library="Browser">
-<arg>${homeLocator}[title]</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230201 12:25:09.944" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230201 12:25:09.844" endtime="20230201 12:25:09.945"/>
+<kw name="When je saisis une chaine de caractères : ${echo test}">
+<msg timestamp="20230201 16:40:14.557" level="FAIL">No keyword with name 'When je saisis une chaine de caractères : ${echo test}' found. Did you mean:
+    step_search.Je Saisis Une Chaine De Caractères : $(echo Test)
+    step_search.Je Saisis Une Chaine De Caractères : ; Echo Test
+    step_search.Je Saisis Une Chaine De Caractères : &amp; Echo Test
+    step_search.Je Saisis Une Chaine De Caractères : ` Echo Test `
+    step_search.Je Saisis Une Chaine De Caractères : Echo Test &gt; /tmp
+    step_search.Je Saisis Une Chaine De Caractères : Echo Test &lt; /tmp
+    step_search.Je Saisis Une Chaine De Caractères : | Echo Toto</msg>
+<status status="FAIL" starttime="20230201 16:40:14.557" endtime="20230201 16:40:14.559"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:09.843" endtime="20230201 12:25:09.945"/>
+<kw name="And je clique sur Entrer" library="step_search">
+<status status="NOT RUN" starttime="20230201 16:40:14.562" endtime="20230201 16:40:14.563"/>
 </kw>
-<kw name="je saisi une chaine de caractères : &quot;test&quot;" library="step_search">
-<kw name="Enter search term" library="home">
-<kw name="Fill Text" library="Browser">
-<arg>${homeLocator}[search]</arg>
-<arg>Lola</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230201 12:25:09.956" level="INFO">Fills the text 'Lola' in the given field.</msg>
-<status status="PASS" starttime="20230201 12:25:09.952" endtime="20230201 12:25:10.163"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:09.948" endtime="20230201 12:25:10.164"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:09.947" endtime="20230201 12:25:10.164"/>
-</kw>
-<kw name="Enter search term" library="home">
-<kw name="Fill Text" library="Browser">
-<arg>${homeLocator}[search]</arg>
-<arg>Lola</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230201 12:25:10.167" level="INFO">Fills the text 'Lola' in the given field.</msg>
-<status status="PASS" starttime="20230201 12:25:10.166" endtime="20230201 12:25:10.390"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.165" endtime="20230201 12:25:10.393"/>
-</kw>
-<kw name="je clique sur Entrer" library="step_search">
-<kw name="Validate" library="home">
-<kw name="Keyboard Key" library="Browser">
-<arg>press</arg>
-<arg>Enter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
-<status status="PASS" starttime="20230201 12:25:10.400" endtime="20230201 12:25:10.494"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.396" endtime="20230201 12:25:10.494"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.395" endtime="20230201 12:25:10.498"/>
-</kw>
-<kw name="Validate" library="home">
-<kw name="Keyboard Key" library="Browser">
-<arg>press</arg>
-<arg>Enter</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
-<status status="PASS" starttime="20230201 12:25:10.500" endtime="20230201 12:25:10.515"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.499" endtime="20230201 12:25:10.515"/>
-</kw>
-<kw name="des résultats de la recherche s'affichent" library="step_search">
-<kw name="Check Search result page" library="search_results">
-<kw name="Get Element" library="Browser">
-<arg>${elements}[page_header]</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230201 12:25:10.946" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230201 12:25:10.518" endtime="20230201 12:25:10.946"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.515" endtime="20230201 12:25:10.946"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.515" endtime="20230201 12:25:10.950"/>
-</kw>
-<kw name="Check Search result page" library="search_results">
-<kw name="Get Element" library="Browser">
-<arg>${elements}[page_header]</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230201 12:25:11.020" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230201 12:25:10.955" endtime="20230201 12:25:11.030"/>
-</kw>
-<status status="PASS" starttime="20230201 12:25:10.952" endtime="20230201 12:25:11.030"/>
+<kw name="Then des résultats de la recherche s'affichent" library="step_search">
+<status status="NOT RUN" starttime="20230201 16:40:14.564" endtime="20230201 16:40:14.565"/>
 </kw>
 <kw name="Test Teardown" type="TEARDOWN">
-<doc>test teardown</doc>
+<doc>test teardown
+You can define the Teardown variable with a keyword for tearing down all your tests.
+You can define the ${TEST_156_TEARDOWN} variable with a keyword for tearing down this specific test.
+If both are defined, Teardown will be run after ${TEST_156_TEARDOWN}.</doc>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_156_TEARDOWN_VALUE}</var>
+<arg>${TEST_156_TEARDOWN}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230201 16:40:14.573" level="INFO">${TEST_156_TEARDOWN_VALUE} = None</msg>
+<status status="PASS" starttime="20230201 16:40:14.570" endtime="20230201 16:40:14.573"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${TEST_TEARDOWN_VALUE}</var>
+<arg>${TEST_TEARDOWN}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20230201 16:40:14.575" level="INFO">${TEST_TEARDOWN_VALUE} = Teardown</msg>
+<status status="PASS" starttime="20230201 16:40:14.574" endtime="20230201 16:40:14.576"/>
+</kw>
 <if>
-<branch type="IF" condition="$TEST_TEARDOWN is not None">
+<branch type="IF" condition="$TEST_156_TEARDOWN_VALUE is not None">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${TEST_156_TEARDOWN}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="NOT RUN" starttime="20230201 16:40:14.578" endtime="20230201 16:40:14.578"/>
+</kw>
+<status status="NOT RUN" starttime="20230201 16:40:14.577" endtime="20230201 16:40:14.578"/>
+</branch>
+<status status="PASS" starttime="20230201 16:40:14.576" endtime="20230201 16:40:14.578"/>
+</if>
+<if>
+<branch type="IF" condition="$TEST_TEARDOWN_VALUE is not None">
 <kw name="Run Keyword" library="BuiltIn">
 <arg>${TEST_TEARDOWN}</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -177,33 +162,48 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230201 12:25:11.765" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230201 12:25:11.073" endtime="20230201 12:25:11.765"/>
+<msg timestamp="20230201 16:40:15.505" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20230201 16:40:14.584" endtime="20230201 16:40:15.505"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:11.071" endtime="20230201 12:25:11.765"/>
+<status status="PASS" starttime="20230201 16:40:14.584" endtime="20230201 16:40:15.506"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:11.041" endtime="20230201 12:25:11.765"/>
+<status status="PASS" starttime="20230201 16:40:14.579" endtime="20230201 16:40:15.506"/>
 </kw>
-<status status="PASS" starttime="20230201 12:25:11.035" endtime="20230201 12:25:11.765"/>
+<status status="PASS" starttime="20230201 16:40:14.579" endtime="20230201 16:40:15.506"/>
 </branch>
-<status status="PASS" starttime="20230201 12:25:11.035" endtime="20230201 12:25:11.765"/>
+<status status="PASS" starttime="20230201 16:40:14.578" endtime="20230201 16:40:15.507"/>
 </if>
-<status status="PASS" starttime="20230201 12:25:11.033" endtime="20230201 12:25:11.765"/>
+<status status="PASS" starttime="20230201 16:40:14.569" endtime="20230201 16:40:15.507"/>
 </kw>
-<status status="PASS" starttime="20230201 12:21:55.244" endtime="20230201 12:25:11.765"/>
+<doc>Test_CS_${echo test}</doc>
+<status status="FAIL" starttime="20230201 16:40:10.924" endtime="20230201 16:40:15.508">No keyword with name 'When je saisis une chaine de caractères : ${echo test}' found. Did you mean:
+    step_search.Je Saisis Une Chaine De Caractères : $(echo Test)
+    step_search.Je Saisis Une Chaine De Caractères : ; Echo Test
+    step_search.Je Saisis Une Chaine De Caractères : &amp; Echo Test
+    step_search.Je Saisis Une Chaine De Caractères : ` Echo Test `
+    step_search.Je Saisis Une Chaine De Caractères : Echo Test &gt; /tmp
+    step_search.Je Saisis Une Chaine De Caractères : Echo Test &lt; /tmp
+    step_search.Je Saisis Une Chaine De Caractères : | Echo Toto</status>
 </test>
-<status status="PASS" starttime="20230201 12:21:51.103" endtime="20230201 12:25:11.797"/>
+<doc>Test_CS_${echo test}</doc>
+<meta name="Automation priority">null</meta>
+<meta name="ID">156</meta>
+<meta name="Reference">010</meta>
+<meta name="Test case importance">Low</meta>
+<status status="FAIL" starttime="20230201 16:40:09.568" endtime="20230201 16:40:15.514"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Search Test">Search Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Echo Test">Echo Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230201 16:40:09.822" level="ERROR">Error in file 'c:\Users\kklepacka\Documents\SquashAD\test_steps\resources\page_objects\home.resource' on line 51: Creating keyword 'Enter search term ^' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20230201 16:40:09.835" level="ERROR">Error in file 'c:\Users\kklepacka\Documents\SquashAD\test_steps\resources\step_definitions\step_search.resource' on line 88: Creating keyword 'je saisis une chaine de caractères : "test"' failed: Keyword with same name defined multiple times.</msg>
 </errors>
 </robot>

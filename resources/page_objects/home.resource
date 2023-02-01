@@ -1,6 +1,6 @@
 *** Settings ***
 Library    Browser
-Library    SeleniumLibrary
+
 *** Variables ***
 &{homeLocator}    title=//h1/a[@href="https://sut-test-adrian.squashcloud.io/"]
 ...    search=//input[@placeholder='Rechercher']
@@ -30,8 +30,8 @@ Enter search term ^
     Fill Text   ${homeLocator}[search]   ^
 Enter search term %test%
     Fill Text   ${homeLocator}[search]   %test%
-Enter search term ${echo test}
-    Fill Text   ${homeLocator}[search]   ${echo test}
+# Enter search term ${echo test}
+#     Fill Text   ${homeLocator}[search]   ${echo test}
 Enter search term \
     Fill Text   ${homeLocator}[search]   \
 Enter search term /
@@ -87,5 +87,5 @@ Enter search term /test
 Enter search term ./test
     Fill Text   ${homeLocator}[search]   ./test
 
-Validate
+Validate input
     Keyboard Key    press    Enter
