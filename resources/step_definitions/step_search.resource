@@ -41,28 +41,28 @@ je saisis une chaine de caractères : $(echo test)
     Enter search term $(echo test)
 je saisis une chaine de caractères : \#test
     Enter search term #test
-# je saisis une chaine de caractères : 𨱏
-#     Enter search term 𨱏
-# je saisis une chaine de caractères : 👩‍❤️‍💋‍👨
-#     Enter search term 👩‍❤️‍💋‍👨
-# je saisis une chaine de caractères : [test]
+je saisis une chaine de caractères : 𨱏
+    Enter search term 𨱏
+je saisis une chaine de caractères : 👩‍❤️‍💋‍👨
+    Enter search term 👩‍❤️‍💋‍👨
+je saisis une chaine de caractères : [test]
 #     Enter search term [test]
 # je saisis une chaine de caractères : {test}
 #     Enter search term {test}
-# je saisis une chaine de caractères : backslash dollar test
-#     Enter search term backslash dollar test
-# je saisis une chaine de caractères : ?
-#     Enter search term ?
-# je saisis une chaine de caractères : !
-#     Enter search term !
-# je saisis une chaine de caractères : +-_.~@€çé=àû
-#     Enter search term +-_.~@€çé=àû
-# je saisis une chaine de caractères : \*
-#     Enter search term \*
-# je saisis une chaine de caractères : ,
-#     Enter search term ,
-# je saisis une chaine de caractères : .
-#     Enter search term .
+je saisis une chaine de caractères : backslash dollar test
+    Enter search term backslash dollar test
+je saisis une chaine de caractères : ?
+    Enter search term ?
+je saisis une chaine de caractères : !
+    Enter search term !
+je saisis une chaine de caractères : +-_.~@€çé=àû
+    Enter search term +-_.~@€çé=àû
+je saisis une chaine de caractères : \*
+    Enter search term *
+je saisis une chaine de caractères : ,
+    Enter search term ,
+je saisis une chaine de caractères : .
+    Enter search term .
 je saisis une chaine de caractères : +
     Enter search term +
 je saisis une chaine de caractères : -
@@ -75,16 +75,16 @@ je saisis une chaine de caractères : @
     Enter search term @
 je saisis une chaine de caractères : €
     Enter search term €
-# je saisis une chaine de caractères : ç
-#     Enter search term ç
-# je saisis une chaine de caractères : =
-#     Enter search term =
-# je saisis une chaine de caractères : û
-#     Enter search term û
-# je saisis une chaine de caractères : /test
-#     Enter search term /test
-# je saisis une chaine de caractères : ./test
-#     Enter search term ./test
+je saisis une chaine de caractères : ç
+    Enter search term ç
+je saisis une chaine de caractères : =
+    Enter search term =
+je saisis une chaine de caractères : û
+    Enter search term û
+je saisis une chaine de caractères : /test
+    Enter search term /test
+je saisis une chaine de caractères : ./test
+    Enter search term ./test
 je saisis une chaine de caractères : "test"
     Enter search term "test"
 
